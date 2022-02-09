@@ -1,89 +1,43 @@
-* {
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
-/* ----------------------- Header ----------------------- */
-
-header {
-    top: 0;
-    left: 0;
-    height: 80px;
-    max-height: 80px;
-
+body {
+	line-height: 1;
 }
-
-.top-container {
-    top: 0;
-    left: 0;
-    position: fixed;
-    min-width: 375px;
-    height: 80px;
-    padding-left: 15px;
-    padding-right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(248, 191, 165);
+ol, ul {
+	list-style: none;
 }
-
-.profile-vector {
-    width: 42px;
-    height: 30px;
-    font-size: 35px;
+blockquote, q {
+	quotes: none;
 }
-
-
-/* ----------------------- Main ----------------------- */
-
-
-main {
-    top: 0;
-    left: 0;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
-
-.chat-box {
-    margin-top: -8px;
-    margin-left: -8px;
-    height: 507px;
-    min-width: 385px;
-    min-width: 375px;
-    background-color: lawngreen;
-}
-
-/* ----------------------- Footer ----------------------- */
-
-footer {
-    position: fixed;
-}
-
-.bottom-bar {
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: -8px;
-    height: 80px;
-    min-width: 375px;
-    background-color: magenta;
-}
-
-.send-message {
-    margin-top: 8px;
-    font-size: 25px;
-}
-
-#text-input {
-    margin-left: 10px;
-    width: 200px;
-    height: 30px;
-    font-family: "Roboto", sans-serif;
-    border: 1px solid #ffffff;
-
-    outline: none;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }

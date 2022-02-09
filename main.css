@@ -1,0 +1,12 @@
+main {
+    /* top: 0; */
+    left: 0;
+}
+
+.chat-box {
+    margin-left: -8px;
+    height: 507px;
+    min-width: 385px;
+    min-width: 375px;
+    background-color: lawngreen;
+}

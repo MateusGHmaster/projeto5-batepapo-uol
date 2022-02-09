@@ -1,0 +1,26 @@
+footer {
+    position: fixed;
+}
+
+.bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    min-width: 375px;
+    background-color: magenta;
+}
+
+.send-message {
+    font-size: 25px;
+}
+
+#text-input {
+    margin-left: 10px;
+    width: 200px;
+    height: 30px;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #ffffff;
+
+    outline: none;
+}
