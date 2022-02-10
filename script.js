@@ -8,8 +8,11 @@ const promise = axios.get("https://mock-api.driven.com.br/api/v4/uol/participant
 promise.then(processResponse);
 
 function processResponse(response) {
-    console.log(response);
-} 
+    
+    const insertChat = document.querySelector(".chat-box");
+    insertChat.innerHTML += ``;
+
+}
 
 
 
