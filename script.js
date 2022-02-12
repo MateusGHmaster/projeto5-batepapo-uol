@@ -13,12 +13,10 @@ promise.then(showMessages);
 function showMessages(response) {
 
     response.data.forEach((messages) => {
+        console.log(messages);
         showEverything(messages);
     });
-        
-    const lastMessage = document.querySelector(".messages-divs").lastElementChild;
-    lastMessage.scrollIntoView();
-
+    
 }
 
 function showEverything (messages) {
@@ -26,12 +24,15 @@ function showEverything (messages) {
     insertChat.innerHTML += `
     
     <div>
-        <p>
-            (${messages.time}) ${messages.from} para ${messages.to}: ${messages.text}.</br></br>
+        <p class="message-style">
+            &nbsp;&nbsp;(${messages.time}) ${messages.from} para ${messages.to}: ${messages.text}.</br></br>
         </p>
+        <style>.message-style{margin-top: 1px; font-style: normal; background-color: white; padding-top: 15px;}</style>
     </div>
     
     `;
+    /* const lastMessage = document.querySelector(".messages-divs").lastElementChild;*/
+    /* lastMessage.scrollIntoView(); */
 }
 
 

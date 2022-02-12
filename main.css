@@ -1,17 +1,15 @@
 main {
-    /* top: 0; */
     left: 0;
 }
 
 .chat-box {
-    margin-left: 0px;
     height: 507px;
     min-width: 375px;
-    
+    background-color: #E5E5E5;
+    overflow: scroll;
 }
 
 .message-divs {
-    padding-top: 8px;
-    margin-left: 5px;
+    padding-top: 2px;
     background-color: #E5E5E5;
 }
