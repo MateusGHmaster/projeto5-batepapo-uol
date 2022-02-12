@@ -2,6 +2,7 @@ let yourUserName = null;
 let toggleMessageTarget = null;
 let hour = null;
 let userName = null;
+let divScroll = null;
 
 function insertUsername () {
     yourUserName = prompt("Por favor, insira seu nome de usuário, para que possamos logo ingressar você em uma conversa! ♥(ˆ⌣ˆԅ)");
@@ -25,15 +26,18 @@ function showEverything (messages) {
     
     <div>
         <p class="message-style">
-            &nbsp;&nbsp;(${messages.time}) ${messages.from} para ${messages.to}: ${messages.text}.</br></br>
+            &nbsp;&nbsp;<span class="span1">(${messages.time})</span> <span class="span2">${messages.from}</span> para <span class="span2">${messages.to}</span>: ${messages.text}.</br></br>
         </p>
-        <style>.message-style{margin-top: 1px; font-style: normal; background-color: white; padding-top: 15px;}</style>
+        <style>.message-style{margin-top: 3px; font-style: normal; background-color: white; padding-top: 15px;}</style>
     </div>
     
     `;
+    divScroll = document.getElementById("message-scroll");
+    divScroll.scrollTop = divScroll.scrollHeight;
     /* const lastMessage = document.querySelector(".messages-divs").lastElementChild;*/
     /* lastMessage.scrollIntoView(); */
 }
+
 
 
 function sendMessage () {

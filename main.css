@@ -6,10 +6,20 @@ main {
     height: 507px;
     min-width: 375px;
     background-color: #E5E5E5;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .message-divs {
-    padding-top: 2px;
+    margin-top: 20px;
     background-color: #E5E5E5;
+    margin-bottom: 3px;
+}
+
+.span2 {
+    font-weight: bold;
+}
+
+.span1 {
+    color: #AAAAAA;
 }
