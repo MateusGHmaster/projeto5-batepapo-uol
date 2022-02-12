@@ -7,19 +7,33 @@ function insertUsername () {
     yourUserName = prompt("Por favor, insira seu nome de usuário, para que possamos logo ingressar você em uma conversa! ♥(ˆ⌣ˆԅ)");
 }
 
-const promise = axios.get("https://mock-api.driven.com.br/api/v4/uol/participants");
-promise.then(processResponse);
+const promise = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages");
+promise.then(showMessages);
 
-function processResponse(response) {
-    
-    const insertChat = document.querySelector(".chat-box");
-    insertChat.innerHTML += `
-    
-    <div>${TBD}</div>
+function showMessages(response) {
 
-    `;
+    response.data.forEach((messages) => {
+        showEverything(messages);
+    });
+        
+    const lastMessage = document.querySelector(".messages-divs").lastElementChild;
+    lastMessage.scrollIntoView();
 
 }
+
+function showEverything (messages) {
+    const insertChat = document.querySelector(".message-divs");
+    insertChat.innerHTML += `
+    
+    <div>
+        <p>
+            (${messages.time}) ${messages.from} para ${messages.to}: ${messages.text}.</br></br>
+        </p>
+    </div>
+    
+    `;
+}
+
 
 function sendMessage () {
 
@@ -67,3 +81,4 @@ function getMessageTime () {
 
 
 insertUsername();
+sendMessage();
