@@ -24,3 +24,13 @@ footer {
 
     outline: none;
 }
+
+.send-message {
+    margin-right: 5px;
+}
+
+.button {
+    padding: 0;
+    border: none;
+    background: none;
+}

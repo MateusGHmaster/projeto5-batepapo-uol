@@ -8,9 +8,6 @@ function insertUsername () {
     yourUserName = prompt("Por favor, insira seu nome de usuário, para que possamos logo ingressar você em uma conversa! ♥(ˆ⌣ˆԅ)");
 }
 
-/* const promise2 = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages");
-promise.then(showMessages); */
-
 function handleLogin () {
     yourUserName = null;
     while ((yourUserName === null) || (yourUserName === undefined) || (yourUserName === '')) {
@@ -33,11 +30,11 @@ function showMessages() {
         promise1.then((response) => {
             document.querySelector(".message-divs").innerHTML = '';
             response.data.forEach((messages) => {
-                console.log(messages);
+                /* console.log(messages); */
                 showEverything(messages);
             });
         });
-    }, 5000);
+    }, 1000);
 
 
     setInterval(() => {
@@ -61,15 +58,20 @@ function showEverything (messages) {
 
     const lastMessage = document.querySelector(".message-divs").lastElementChild;
     lastMessage.scrollIntoView(); 
-    
+
 }
 
 
 
 function sendMessage () {
+    
+    let myMessage = document.querySelector('input').value;
+    console.log(myMessage);
+    const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages", {from: yourUserName, to: "Todos", text: myMessage, type: "message"});
+    /* promise.then(showEverything); */
 
-    let myMessage = document.querySelector(".text").value;
-    let message = document.querySelector(".message-divs");
+    
+    /* let message = document.querySelector(".message-divs");
     if (toggleMessageTarget === "Public") {
         hour = getMessageTime();
         message.innerHTML+= `
@@ -77,12 +79,12 @@ function sendMessage () {
         <div class="public-message" data-identifier="message">
             <p class="message-container">
                 <div>${hour}</div>
-                <strong class="user-name">${userName}</strong>
+                <strong class="user-name">${yourUserName}</strong>
             </p>
         </div>
 
         `
-        const textInput = document.querySelector(".text");
+        const textInput = document.getElementById(".text-input");
         console.log(textInput);
         textInput.value = "";
     } else if (toggleMessageTarget === "Private") {
@@ -92,20 +94,15 @@ function sendMessage () {
         <div class="private-message" data-identifier="message">
             <p class="message-container">
                 <time>${hour}</time>
-                <strong class="user-name">${userName}</strong>
+                <strong class="user-name">${yourUserName}</strong>
             </p>
         </div>
         
         `
-        const textInput = document.querySelector(".text");
+        const textInput = document.getElementById(".text-input");
         textInput.value = "";
-    }
+    } */
 }
-
-function getMessageTime () {
-
-}
-
 
 
 
