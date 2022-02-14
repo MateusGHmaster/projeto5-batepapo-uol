@@ -100,7 +100,6 @@ function sendMessage () {
         const textInput = document.querySelector(".text");
         textInput.value = "";
     }
-
 }
 
 function getMessageTime () {
