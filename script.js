@@ -30,7 +30,6 @@ function showMessages() {
         promise1.then((response) => {
             document.querySelector(".message-divs").innerHTML = '';
             response.data.forEach((messages) => {
-                /* console.log(messages); */
                 showEverything(messages);
             });
         });
@@ -68,7 +67,7 @@ function sendMessage () {
     let myMessage = document.querySelector('input').value;
     console.log(myMessage);
     const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages", {from: yourUserName, to: "Todos", text: myMessage, type: "message"});
-    /* promise.then(showEverything); */
+    myMessage = querySelector('input').innerHTML = '';
 
     
     /* let message = document.querySelector(".message-divs");
